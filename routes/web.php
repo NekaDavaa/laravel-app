@@ -13,9 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+use App\Http\Controllers\TestController;
+
 Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/hello/{id}', function ($id) {
     return view('hello', ['id' => $id]);
 });
+
+
+Route::get('/test', [TestController::class, 'index']);
