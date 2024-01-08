@@ -1,0 +1,1 @@
+<h1>Hello ларавел <?php echo $id ?></h1>
