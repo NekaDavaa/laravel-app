@@ -8,8 +8,12 @@ class TestController extends Controller
 {
    
    public function index(Request $request){
-    var_dump($request->name);
-    echo $this->user();
+   if ($request->hasAny(['name', 'email'])) {
+    return 'OK';
+}
+else {
+    return 'Not matched';
+}
    }
    public function user () {
     return 'asd';
